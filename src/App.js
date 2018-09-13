@@ -159,7 +159,7 @@ class App extends React.Component {
             <Row style={{ justifyContent: 'center' }}>
               <img alt="home" src={image_home} className="img-main" />
               <img alt="heroes" src={image_heroes} className="img-main" />
-              <video src={video_hero} className="img-main" autoPlay loop/>
+              <video src={video_hero} className="img-main" autoPlay loop muted controls preload="auto"/>
               <img alt="items" src={image_items} className="img-main" />
               <img alt="item" src={image_item} className="img-main" />
               <img alt="stats" src={image_stats} className="img-main" />
