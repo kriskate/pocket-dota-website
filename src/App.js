@@ -101,6 +101,7 @@ class App extends React.Component {
                         tooltipContent="Download for Android">
                       <NavLink to="#" onClick={this.pressAndroid}>
                         <Fa icon="android" />
+                        <div className="menu-hideable-label">Android</div>
                       </NavLink>
                     </Tooltip>
                   </NavItem>
@@ -110,6 +111,7 @@ class App extends React.Component {
                         tooltipContent="Download for IOS">
                       <NavLink to="#" onClick={this.pressIOS}>
                         <Fa icon="apple" />
+                        <div className="menu-hideable-label">IOS</div>
                       </NavLink>
                     </Tooltip>
                   </NavItem>
@@ -119,6 +121,7 @@ class App extends React.Component {
                       tooltipContent="Download for Expo">
                         <NavLink to="#" onClick={this.pressExpo}>
                           <img alt="expo" className="expo-icon" src="https://d30j33t1r58ioz.cloudfront.net/static/brand/logo-a-white-228x228.png" />
+                          <div className="menu-hideable-label">Expo</div>
                         </NavLink>
                     </Tooltip>
                   </NavItem>
