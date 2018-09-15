@@ -25,6 +25,11 @@ run(`git commit -m "Released version ${version}"`)
 run(`git tag ${version}`)
 
 
+STEP('BUILD')
+run('yarn build')
+
+
+
 STEP('GCLOUD SET PROJECT')
 run('gcloud config set project pocket-dota')
 
