@@ -26,7 +26,7 @@ export default class Form extends React.Component  {
     
     const { email, name } = this.state;
     
-    const url = !isDev ? '/subscribe' : 'http://localhost:8080/subscribe';
+    const url = !isDev ? 'https://pocket-dota-backend.appspot.com/subscribe' : 'http://localhost:8080/subscribe';
     if(!this.validateEmail(email)){
       alert('The specified email address is not valid.')
     }else {

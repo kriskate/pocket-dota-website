@@ -1,0 +1,12 @@
+.git
+.vscode/
+
+node_modules/
+public/
+src/
+
+.gcloudignore
+.gitignore
+
+deploy.js
+README.md
