@@ -11,13 +11,9 @@ const app = new express();
 
 app.use(express.static(path.join(__dirname, '..', 'build')));
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
-});
-
 (async () => {
 
-/* SUBSCRIBERS */
+  /* SUBSCRIBERS */
   await initializeSubscribers();
 
   app.use((req, res, next) => {
@@ -51,6 +47,11 @@ app.get('/', function(req, res) {
     res.status(200).send({ message });
   })
 
+
+  /* MAIN ENTRY */
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+  });
 
 
   /* watch express API server */
