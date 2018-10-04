@@ -2,6 +2,9 @@
   margin-left: 0;
   margin-right: 0;
 }
+#apppage .md-form .prefix {
+  left: 0;
+}
 #apppage #logo {
   max-width: 40px;
 }
