@@ -13,7 +13,7 @@ import image_home_framed from './images/screenshots-android/home_framed.png';
 
 import image_home from './images/screenshots-android/home.png';
 import image_heroes from './images/screenshots-android/heroes.png';
-import video_hero from './images/screenshots-android/hero.webm';
+import video_hero from './images/screenshots-android/hero.mp4';
 import image_items from './images/screenshots-android/items.png';
 import image_item from './images/screenshots-android/item.png';
 import image_stats from './images/screenshots-android/stats.png';
