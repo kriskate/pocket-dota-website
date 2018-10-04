@@ -18,7 +18,15 @@ import image_items from './images/screenshots-android/items.png';
 import image_item from './images/screenshots-android/item.png';
 import image_stats from './images/screenshots-android/stats.png';
 import image_stats_profile from './images/screenshots-android/stats-profile.png';
+
 import Form from './Components/Form';
+
+import logo_paypal from './images/logos/paypalme.png';
+import logo_discord from './images/logos/discord.svg';
+import logo_expo from './images/logos/paypalme.png';
+
+const paypalURL = 'https://www.paypal.me/kriskate';
+
 
 const URLS = {
   'Valve corporation': 'https://www.valvesoftware.com',
@@ -120,7 +128,7 @@ class App extends React.Component {
                       placement="bottom"
                       tooltipContent="Download for Expo">
                         <NavLink to="#" onClick={this.pressExpo}>
-                          <img alt="expo" className="expo-icon" src="https://d30j33t1r58ioz.cloudfront.net/static/brand/logo-a-white-228x228.png" />
+                          <img alt="expo" className="expo-icon" src={logo_expo} />
                           <div className="menu-hideable-label">Expo</div>
                         </NavLink>
                     </Tooltip>
@@ -170,7 +178,7 @@ class App extends React.Component {
             </Row>
           </Row>
 
-          <Row ref={"subscribe"} className="justify-content-center">
+          <Row ref={"subscribe"} className="py-5 justify-content-center">
             <Col md="12">
               <Form />
             </Col>
@@ -179,10 +187,18 @@ class App extends React.Component {
           <Row ref={"chat"} className="py-5">
             <Col md="12" className="text-center">
               <div>
-                <p className="h4"><img alt="discord" className="discord" src="https://discordapp.com/assets/f8389ca1a741a115313bede9ac02e2c0.svg"/> Let's chat on Discord!</p>
-                <p>If you experience any issues with the usage of this app, please use the <a href={URLS["Issues"]}>Issues</a> channel.</p>
+                <p className="h4"><img alt="discord" className="discord" src={logo_discord}/> Let's chat on Discord!</p>
+                <p>If you experience any issues while using this app, please use the <a href={URLS["Issues"]}>Issues</a> channel.</p>
                 <p>If you would like to see more functionality brought into the app, use the <a href={URLS["Feature Requests"]}>Feature Requests</a> channel.</p>
                 <p>If you just wanna have a chat regarding this app, use the <a href={URLS["General"]}>General</a> channel.</p>
+              </div>
+            </Col>
+          </Row>
+
+          <Row ref={"donate"} className="py-5">
+            <Col md="12" className="text-center">
+              <div>
+                <p><img alt="paypal.me" className="discord" src={logo_paypal}/> If you'd like to show some support, you can donate at <a href={paypalURL}>paypal.me/kriskate</a>.</p>
               </div>
             </Col>
           </Row>
