@@ -99,13 +99,13 @@ class App extends React.Component {
               </NavbarBrand>
               <NavbarToggler onClick = { this.onClick } />
               <Collapse isOpen = {this.state.collapse} navbar>
-                <NavbarNav left >
+                {/* <NavbarNav left >
                   <NavItem>
                     <NavLink to="#" onClick={() => this.scrollTo("screenshots")}>
                       Screenshots
                     </NavLink>
                   </NavItem>
-                </NavbarNav>
+                </NavbarNav> */}
                 <NavbarNav right >
                   <NavItem>
                     <Tooltip
