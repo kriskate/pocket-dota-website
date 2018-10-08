@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import { Navbar, NavbarBrand, NavbarNav, NavItem, NavLink, NavbarToggler, Collapse, Mask, Row, Col, Fa, Button, View, Container, Tooltip } from 'mdbreact';
+import { Input, Navbar, NavbarBrand, NavbarNav, NavItem, NavLink, NavbarToggler, Collapse, Mask, Row, Col, Fa, Button, View, Container, Tooltip } from 'mdbreact';
 import './App.css';
 
 import icon from './images/app-icon-no-border.png';
@@ -19,11 +19,17 @@ import image_item from './images/screenshots-android/item.png';
 import image_stats from './images/screenshots-android/stats.png';
 import image_stats_profile from './images/screenshots-android/stats-profile.png';
 
+import image_BTC from './images/crypto/BTC.png';
+import image_ETH from './images/crypto/ETH.png';
+
 import Form from './Components/Form';
 
 import logo_paypal from './images/logos/paypalme.png';
 import logo_discord from './images/logos/discord.svg';
 import logo_expo from './images/logos/expo.png';
+
+import logo_bitcoin from './images/crypto/logo-bitcoin.jpg';
+import logo_ethereum from './images/crypto/logo-ethereum.png';
 
 
 const URLS = {
@@ -48,7 +54,31 @@ const URLS = {
   APP_IOS: "",
   APP_ANDROID: "https://play.google.com/store/apps/details?id=kriskate.pocketdota",
   APP_EXPO: "https://expo.io/@kriskate/pocket-dota",
+
+  BTC: "1DjjyKjsKxJ7jkFVdVaenxHZnS7mtwHq5b",
+  ETH: "0xedfbce6a46ca97e0934ba7aaeb97de527fb850ec",
 }
+
+
+const copyToClipboard = el => {
+  console.log(el)
+  el.select();
+  document.execCommand('copy');
+  alert(`copied ${el.value} to clipboard!`);
+};
+const ButtonClipboard = ({ url, logo, qr, text }) => {
+  const width =((url.length+1) * 9) + 'px';
+
+  return (
+    <div>
+      <img src={logo} alt={text} className='discord' /> [{text}]
+      <Input type="text" readonly value={url} className='wallet' style={{width, fontWeight: 300, textAlign: 'center'}}
+          onClick={(e) => copyToClipboard(e.target)} />
+      (<a href={qr} target='_blank'>QR code</a>)
+    </div>
+  )
+}
+
 
 class App extends React.Component {
   constructor(props) {
@@ -203,7 +233,20 @@ class App extends React.Component {
           <Row ref={"donate"} className="py-5">
             <Col md="12" className="text-center">
               <div>
-                <p><a href={URLS.Paypal} target='_blank'><img alt="paypal.me" className="discord" src={logo_paypal}/></a> If you'd like to show some support, you can donate at <a href={URLS.Paypal} target='_blank'>paypal.me/kriskate</a>.</p>
+                <p> If you'd like to show some support, you can donate at:</p>
+                <div className=''>
+                  <div className='donation-method'>
+                    <a href={URLS.Paypal} target='_blank'><img alt="paypal.me" className="discord" src={logo_paypal}/></a><a href={URLS.Paypal} target='_blank'>paypal.me/kriskate</a>
+                  </div>
+                  <div className="crypto">
+                    <div className='donation-method'>
+                      <ButtonClipboard url={URLS.BTC} logo={logo_bitcoin} qr={image_BTC} text="BTC" />
+                    </div>
+                    <div className='donation-method'>
+                      <ButtonClipboard url={URLS.ETH} logo={logo_ethereum} qr={image_ETH} text="ETH" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </Col>
           </Row>
