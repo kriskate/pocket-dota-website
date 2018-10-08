@@ -44,9 +44,10 @@ const URLS = {
 
   'Paypal': 'https://www.paypal.me/kriskate',
 
-  android: '',
-  ios: '',
-  expo: 'https://expo.io/@kriskate/pocket-dota',
+
+  APP_IOS: "",
+  APP_ANDROID: "https://play.google.com/store/apps/details?id=kriskate.pocketdota",
+  APP_EXPO: "https://expo.io/@kriskate/pocket-dota",
 }
 
 class App extends React.Component {
@@ -77,13 +78,13 @@ class App extends React.Component {
   }
 
   pressAndroid = () => {
-    alert('Coming soon!');
+    window.open(URLS.APP_ANDROID, "_blank")
   }
   pressIOS = () => {
     alert('Coming soon!');
   }
   pressExpo = () => {
-    window.open(URLS.expo, "_self")
+    window.open(URLS.APP_EXPO, "_blank")
   }
 
   render(){
