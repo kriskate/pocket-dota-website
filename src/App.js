@@ -213,11 +213,11 @@ class App extends React.Component {
             </Row>
           </Row>
 
-          <Row ref={"subscribe"} className="py-5 justify-content-center">
+          {/* <Row ref={"subscribe"} className="py-5 justify-content-center">
             <Col md="12">
               <Form />
             </Col>
-          </Row>
+          </Row> */}
 
           <Row ref={"chat"} className="py-5">
             <Col md="12" className="text-center">
