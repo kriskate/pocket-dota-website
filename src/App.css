@@ -93,6 +93,7 @@
 }
 
 #apppage .navbar {
+  background-color: #1b1e2154;
   transition: background .5s ease-in-out,padding .5s ease-in-out;
 }
 
@@ -104,4 +105,8 @@
   #apppage .navbar:not(.top-nav-collapse) {
       background: #1B1E21 !important;
   }
+}
+
+#apppage .padtop {
+  margin-top: 100px;
 }
