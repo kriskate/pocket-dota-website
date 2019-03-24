@@ -1,3 +1,3 @@
-## Pocket Dota Landing Page
+## App Landing Page
 
-[Pocket Dota](https://github.com/kriskate/pocket-dota)'s presentation website
+[Pocket Info (Dota2)](https://github.com/kriskate/pocket-dota)'s presentation website

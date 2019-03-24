@@ -1,5 +1,15 @@
+import React from 'react';
+
+export const AppName = () => (
+  <b>
+    <img alt="" src={Images.icon} height="20" style={{ verticalAlign: "top", display: "inline-block" }}/>
+    Pocket Info (Dota2)
+  </b>
+)
+
 export const Images = {
-  icon: require('../images/app-icon-no-border.png'),
+  icon: require('../images/icon.png'),
+  logo: require('../images/logo.png'),
   
   badgeGoogle: require('../images/badges/badge-google-play.png'),
   badgeApple: require('../images/badges/badge-appstore.png'),

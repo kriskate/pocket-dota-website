@@ -7,11 +7,11 @@ import NavItems from './NavItems';
 
 import { Images } from '../Utils/Assets';
 
-export default ({ collapse, toggleNavbar }) => (
-  <Navbar dark expand="md" fixed="top" scrolling>
+export default ({ collapse, toggleNavbar, applyHeaderBackground }) => (
+  <Navbar dark expand="md" fixed="top" scrolling className={applyHeaderBackground ? "top-nav-collapse" : ""} >
     <Container>
-      <NavbarBrand style={{color:'white'}}>
-        <img alt="logo" src={Images.icon} id="logo" className="img-fluid rounded" /> Pocket Dota
+      <NavbarBrand style={{color:'white'}} href='/'>
+        <img alt="logo" src={Images.logo} id="logo" className="img-fluid rounded" />
       </NavbarBrand>
       <NavbarToggler onClick={ toggleNavbar } />
       <Collapse isOpen={collapse} navbar>
