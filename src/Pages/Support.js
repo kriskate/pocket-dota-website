@@ -8,7 +8,7 @@ export default class Support extends React.PureComponent {
   }
   render() {
     return (
-      <MDBContainer className="padtop support-page">
+      <MDBContainer className="padtop">
         <MDBRow>
           <p>
             <h2>About</h2>

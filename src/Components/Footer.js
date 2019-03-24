@@ -15,6 +15,9 @@ export default () => (
         <MDBCol>
           <a href='/support'>Support</a>
         </MDBCol>
+        <MDBCol>
+          <a href='/changelog'>Changelog</a>
+        </MDBCol>
       </MDBRow>
     </MDBContainer>
 

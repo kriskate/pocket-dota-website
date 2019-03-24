@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const AppName = () => (
+export const AppName = ({ noLogo }) => (
   <b>
-    <img alt="" src={Images.icon} height="20" style={{ verticalAlign: "top", display: "inline-block" }}/>
+    { noLogo ? null : <img alt="" src={Images.icon} height="20" style={{ verticalAlign: "top", display: "inline-block" }}/> }
     Pocket Info (Dota2)
   </b>
 )

@@ -17,7 +17,7 @@ export default class Home extends React.Component{
 
   render() {
     return (
-      <div>
+      <div className="padtop2">
         <View>
           <Mask className="d-flex justify-content-center align-items-center gradient">
             <Container>

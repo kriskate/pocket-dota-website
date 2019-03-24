@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fa, MDBContainer } from "mdbreact";
 import { AppName, URLS } from '../Utils/Assets';
-import Donate from './Donate';
+import Donate from '../Components/Donate';
 
 const urls = {
   gh: "https://github.com/kriskate/pocket-dota/",

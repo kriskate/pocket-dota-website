@@ -50,8 +50,6 @@ export default class Support extends React.PureComponent {
         <h4>Changes to This Privacy Policy</h4>
         <p> I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p> 
         
-        <h4>Contact</h4>
-        <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at <a href="mailto:pocket.dota.app@gmail.com">pocket.dota.app@gmail.com</a>.</p> 
       </MDBContainer>
     )
   }

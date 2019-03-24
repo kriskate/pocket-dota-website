@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import Header from './Components/Header';
+import Footer from './Components/Footer';
+
 import Home from './Pages/Home';
 import Support from './Pages/Support';
-import Footer from './Components/Footer';
 import Privacy from './Pages/Privacy';
-import Contribute from './Components/Contribute';
+import Contribute from './Pages/Contribute';
+import Changelog from './Pages/Changelog';
 
 
 
@@ -33,6 +35,7 @@ class App extends React.Component {
           <Route path="/contribute" render={() => <Contribute headerBackground={this._headerBackground} /> }/>
           <Route path="/privacy-policy" render={() => <Privacy headerBackground={this._headerBackground} /> }/>
           <Route path="/support" render={() => <Support headerBackground={this._headerBackground} /> }/>
+          <Route path="/changelog" render={() => <Changelog headerBackground={this._headerBackground} /> }/>
 
           <Footer />
         </div>

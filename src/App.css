@@ -107,9 +107,38 @@
   }
 }
 
-#apppage .padtop {
-  margin-top: 100px;
+#apppage {
+  position: relative;
+  min-height: 100vh;
 }
-#apppage .support-page {
-  padding-bottom: 20%;
+#apppage .padtop {
+  padding-top: 100px;
+  /* min-height: 100%; */
+  padding-bottom: 200px;
+}
+#apppage .padtop2 {
+  padding-bottom: 200px;
+}
+
+#apppage .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+}
+@media (max-width: 600px) {
+  #apppage .padtop {
+    padding-bottom: 22em;
+  }
+  #apppage .padtop2 {
+    padding-bottom: 22em;
+  }
+  #apppage .footer {
+    height: 22em;
+  }
+}
+
+#apppage .footer .col {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
