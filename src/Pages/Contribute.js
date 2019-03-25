@@ -33,14 +33,14 @@ export default class Contribute extends React.PureComponent {
               <AppName /> - to help translate the app, <a href={urls.crowdin}>go here</a>.<br/>
               For more information about translations and supported languages, <a href={urls.ghTrs}>go here.</a><br/><br/>
               
-              <b>The wiki data</b> = comes from the game files, so the wiki translations are available.<br/>
-              <b>The stats section</b> - comes from <a href={URLS["Open Dota"]}>OpenDota</a>. If you encounter any translation problems with this section, <a href={urls.crowdinODOTA}>go here</a>.<br/>
+              <b>The wiki data</b> - comes from the game files, so the wiki translations are available (but sometimes incomplete - i.e. patch notes).<br/>
+              <b>The stats section</b> - comes from <a href={URLS["Open Dota"]}>OpenDota</a>. If you encounter any translation problems with this section, you can help out <a href={urls.crowdinODOTA}>here</a>.<br/>
             </p>
             <p>
               <h4>Donations</h4>
               Even though <AppName /> is developed as a hobby, I did spend quite a lot of time developing and designing it well enough for both <Fa icon="apple" /> Apple and <Fa icon="android" /> Google stores, as well as for you to have a better experience while using it.<br/>
-              Thus, any financial support would be of great help.<br/>
-              It also keeps me motivated to develop even more features.
+              Thus, any financial support would be greatly appreciated.<br/>
+              This also keeps me motivated to develop even more features.
               <Donate />
             </p>
           </p>
