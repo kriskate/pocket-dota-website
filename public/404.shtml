@@ -11,10 +11,8 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-
   <div style="text-align: center">
-    <p><img src="../src//images/logo.png" /></p>
+    <p><img src="./logo.png" /></p>
     <p>I don't think this is what you're looking for; but if it is -- Enjoy!</p>
   </div>
 </body>
