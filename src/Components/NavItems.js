@@ -3,22 +3,16 @@ import { Fa, NavbarNav, NavItem, NavLink, Tooltip, } from 'mdbreact';
 
 import { URLS, Images } from '../Utils/Assets';
 
-const Open = {
-  Android: () => {
-    window.open(URLS.APP_ANDROID, "_blank")
-  },
-  IOS: () => {
-    alert('Coming soon!');
-  },
-  Expo: () => {
-    window.open(URLS.APP_EXPO, "_blank")
-  },
+
+const openURL = (url) => {
+  if(url) window.open(url, "_blank");
+  else alert('App in Review; Coming soon!');
 }
 export default () => (
   <NavbarNav right >
     <NavItem>
       <Tooltip placement="bottom" tooltipContent="Download for Android">
-        <NavLink to="#" onClick={Open.Android}>
+        <NavLink to="#" onClick={() => openURL(URLS.APP_ANDROID) }>
           <Fa icon="android" />
           <div className="menu-hideable-label">Android</div>
         </NavLink>
@@ -26,7 +20,7 @@ export default () => (
     </NavItem>
     <NavItem>
       <Tooltip placement="bottom" tooltipContent="Download for IOS">
-        <NavLink to="#" onClick={Open.IOS}>
+        <NavLink to="#" onClick={() => openURL(URLS.APP_IOS) }>
           <Fa icon="apple" />
           <div className="menu-hideable-label">IOS</div>
         </NavLink>
@@ -34,7 +28,7 @@ export default () => (
     </NavItem>
     <NavItem>
       <Tooltip placement="bottom" tooltipContent="Download for Expo">
-        <NavLink to="#" onClick={Open.Expo}>
+        <NavLink to="#" onClick={() => openURL(URLS.APP_EXPO) }>
           <img alt="expo" className="expo-icon" src={Images.logo_expo} />
           <div className="menu-hideable-label">Expo</div>
         </NavLink>
