@@ -24,6 +24,9 @@
   #apppage .tooltip {
     display: none;
   }
+  #apppage #logo {
+    max-width: 210px;
+  }
 }
 
 #apppage .store-badge {
