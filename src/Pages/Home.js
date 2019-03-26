@@ -4,6 +4,7 @@ import { Mask, Row, Col, Button, View, Container, } from 'mdbreact';
 
 import { Images, URLS, AppName } from '../Utils/Assets';
 import Donate from '../Components/Donate';
+import { openURL } from '../Utils/Utils';
 
 const {   
   badgeGoogle, badgeApple,
@@ -28,8 +29,8 @@ export default class Home extends React.Component{
                   <h6 className="mb-4"><AppName /> is a free app that aims to give players an insight from within the game, when they're unable to access the actual game. <br/> 
                   It can also be used while playing the game, in order to keep track of the heroes and items of the opposing teams.</h6>
 
-                  <Button onClick={this.pressAndroid} color="elegant" className="nopad"><img alt="android" src={badgeGoogle} className="store-badge" /></Button>
-                  <Button onClick={this.pressIOS} color="elegant" className="nopad"><img alt="ios" src={badgeApple} className="store-badge" /></Button>
+                  <Button onClick={() => openURL(URLS.APP_ANDROID)} color="elegant" className="nopad"><img alt="android" src={badgeGoogle} className="store-badge" /></Button>
+                  <Button onClick={() => openURL(URLS.APP_IOS)} color="elegant" className="nopad"><img alt="ios" src={badgeApple} className="store-badge" /></Button>
                 </div>
                 <Col md="6" xl="5" className="mt-xl-5 img-main-wrapper">
                   <img alt="home-framed" src={image_home_framed} className="img-fluid img-main" />

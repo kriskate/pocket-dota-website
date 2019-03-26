@@ -53,7 +53,7 @@ export const URLS = {
   'Paypal': 'https://www.paypal.me/kriskate',
 
 
-  APP_IOS: "",
+  APP_IOS: "https://itunes.apple.com/us/app/pocket-info-for-dota2/id1457588974?ls=1&mt=8",
   APP_ANDROID: "https://play.google.com/store/apps/details?id=kriskate.pocketinfodota",
   APP_EXPO: "https://expo.io/@kriskate/pocket-dota",
 

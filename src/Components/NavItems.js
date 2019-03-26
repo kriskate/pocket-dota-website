@@ -2,12 +2,10 @@ import React from 'react';
 import { Fa, NavbarNav, NavItem, NavLink, Tooltip, } from 'mdbreact';
 
 import { URLS, Images } from '../Utils/Assets';
+import { openURL } from '../Utils/Utils';
 
 
-const openURL = (url) => {
-  if(url) window.open(url, "_blank");
-  else alert('App in Review; Coming soon!');
-}
+
 export default () => (
   <NavbarNav right >
     <NavItem>

@@ -3,6 +3,11 @@ import { Input } from 'mdbreact';
 import ReactDOM from 'react-dom';
 
 
+export const openURL = (url) => {
+  if(url) window.open(url, "_blank");
+  else alert('App in Review; Coming soon!');
+}
+
 
 export const copyToClipboard = el => {
   el.select();
