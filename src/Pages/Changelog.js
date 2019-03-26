@@ -15,7 +15,10 @@ export default class Changelog extends React.PureComponent {
   render() {
     return (
       <MDBContainer className="padtop">
-      <h2 style={{ display: "inline-block" }}>Changelog</h2> - <AppName noLogo /> version history
+      <p>
+        <h2>Changelog</h2>
+      <AppName /> version history
+      </p>
       {Object.keys(changelogs).map(log => (
         <MDBRow>
           <p>
