@@ -54,7 +54,7 @@ export const URLS = {
 
 
   APP_IOS: "",
-  APP_ANDROID: "https://play.google.com/store/apps/details?id=kriskate.pocketdota",
+  APP_ANDROID: "https://play.google.com/store/apps/details?id=kriskate.pocketinfodota",
   APP_EXPO: "https://expo.io/@kriskate/pocket-dota",
 
   BTC: "1DjjyKjsKxJ7jkFVdVaenxHZnS7mtwHq5b",
