@@ -1,12 +1,13 @@
 import React from 'react';
 import { MDBContainer, MDBRow, } from "mdbreact";
-import { Images, AppName } from '../Utils/Assets';
+import { AppName } from '../Utils/Assets';
 
 const changelogs = {
   "1.1.0": "Hero talent tree; Scrollable Homescreen with new items (Tip, Patch Notes, Settings); Dota 2 game tips; Patch notes; No images recache at wiki update",
   "1.2.2": "Hero roles; Hero complexity; Hero advanced attributes; Hero changelog (from Patch notes); Item changelog (from Patch notes); Recalculated attribute bonuses; Added default wiki data; No longer have to download additional data on first run; User consent for pre-caching images; UI tweaks (eg: disable menu bounce on IOS); Expo SDK upgrade; Various performance enhancements;",
   "1.3.0": "Added translations engine; Available additional languages: French, Romanian;",
   "2.0.0": "Rebranded to Pocket Info for Dota2; Minor layout adjustments;",
+  "2.0.1": "Bugfix: Desired language is now loaded by default; Various small fixes;",
 }
 export default class Changelog extends React.PureComponent {
   componentDidMount() {
@@ -19,7 +20,7 @@ export default class Changelog extends React.PureComponent {
         <h2>Changelog</h2>
       <AppName /> version history
       </p>
-      {Object.keys(changelogs).map(log => (
+      {Object.keys(changelogs).sort((a, b) => b.split('.').join('') - a.split('.').join('')).map(log => (
         <MDBRow>
           <p>
             <h4>{log}:</h4>
