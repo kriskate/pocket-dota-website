@@ -8,6 +8,7 @@ const changelogs = {
   "1.3.0": "Added translations engine; Available additional languages: French, Romanian;",
   "2.0.0": "Rebranded to Pocket Info for Dota2; Minor layout adjustments;",
   "2.0.1": "Bugfix: Desired language is now loaded by default; Various small fixes;",
+  "2.0.2": "Icon change (enlarged background); Optimized all images (reduced app size by 1MB); Added About button on Home screen;",
 }
 export default class Changelog extends React.PureComponent {
   componentDidMount() {
