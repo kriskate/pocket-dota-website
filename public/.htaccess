@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Redirect HTTP to HTTPS on the same host
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=302,L]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html
