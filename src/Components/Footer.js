@@ -6,12 +6,12 @@ export default () => (
   <MDBFooter color="elegant-color-dark" className="font-small pt-4 mt-4 footer">
     <MDBContainer fluid className="text-center mb-4">
       <MDBRow>
-        <MDBCol style={{ display: "none" }}>
-          <a href='/contributions'>Contributions</a>
-        </MDBCol>
         <MDBCol>
-          <a href='/contribute'>Contribute</a>
+          <a href='/contributions'>Contribute</a>
         </MDBCol>
+        {/* <MDBCol>
+          <a href='/contribute'>Contribute</a>
+        </MDBCol> */}
         <MDBCol>
           <a href='/privacy-policy'>Privacy Policy</a>
         </MDBCol>
