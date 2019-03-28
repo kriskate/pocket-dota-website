@@ -6,12 +6,16 @@ export default () => (
   <MDBFooter color="elegant-color-dark" className="font-small pt-4 mt-4 footer">
     <MDBContainer fluid className="text-center mb-4">
       <MDBRow>
+        <MDBCol style={{ display: "none" }}>
+          <a href='/contribute'>Contribute</a>
+        </MDBCol>
+        <MDBCol style={{ display: "none" }}>
+          <a href='/license'>License</a>
+        </MDBCol>
+
         <MDBCol>
           <a href='/contributions'>Contribute</a>
         </MDBCol>
-        {/* <MDBCol>
-          <a href='/contribute'>Contribute</a>
-        </MDBCol> */}
         <MDBCol>
           <a href='/privacy-policy'>Privacy Policy</a>
         </MDBCol>
@@ -28,7 +32,9 @@ export default () => (
       <MDBContainer fluid>
         <div>Dota 2 is a registered trademark of Valve Corporation.</div>
         <div><AppName /> is hereby not created, sponsored or endorsed by Valve Corporation.</div>
-        <div>&copy; {new Date().getFullYear()} Copyright: <a href="https://www.pocket-dota.info">www.pocket-dota.info</a>. </div>
+        <div>
+          <a href="/license">Copyright {new Date().getFullYear()} @ kriskate</a>
+        </div>
       </MDBContainer>
     </div>
   </MDBFooter>

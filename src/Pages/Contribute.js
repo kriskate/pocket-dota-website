@@ -26,7 +26,12 @@ export default class Contribute extends React.PureComponent {
         <div>
           <div className="mb-4">
             <h2>Contributing</h2>
-            <p>The app's codebase is available on <a href={urls.gh}>github.</a></p>
+            <p className="hoverer">
+              <p>
+                <AppName /> is Open Source. <a href="/license">View license</a>
+              </p>
+              <p>The app's codebase is available on <a href={urls.gh}>github.</a></p>
+            </p>
           </div>
             
 
