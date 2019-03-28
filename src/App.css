@@ -145,3 +145,11 @@
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+.hoverer {
+  transition: 1s;
+  padding: 10px;
+}
+.hoverer:hover {
+  background-color: #ffc10759;
+}

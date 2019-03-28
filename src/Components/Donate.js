@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col, } from 'mdbreact'
 import { ButtonClipboard } from '../Utils/Utils';
 import { Images, URLS } from '../Utils/Assets';
 

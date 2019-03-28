@@ -3,7 +3,6 @@ import { Mask, Row, Col, Button, View, Container, } from 'mdbreact';
 
 
 import { Images, URLS, AppName } from '../Utils/Assets';
-import Donate from '../Components/Donate';
 import { openURL } from '../Utils/Utils';
 
 const {   

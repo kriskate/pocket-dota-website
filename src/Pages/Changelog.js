@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBMask, MDBView } from "mdbreact";
+import { MDBContainer, } from "mdbreact";
 import { AppName } from '../Utils/Assets';
 
 export default class Changelog extends React.PureComponent {
@@ -21,35 +21,31 @@ export default class Changelog extends React.PureComponent {
 
     return (
       <MDBContainer className="padtop">
-        <MDBRow>
-          <div>
-            <h2>Changelog</h2>
-            <p>
-              <AppName /> version history
-            </p>
-          </div>
-        </MDBRow>
-        <br/>
+        <div className="mb-4">
+          <h2>Changelog</h2>
+          <p>
+            <AppName /> version history
+          </p>
+        </div>
+
       { !changes ? <p>Loading...</p>
         :
-        Object.keys(changes).length == 0 
+        Object.keys(changes).length === 0 
         ? <p>Could not load changelog at this time. Please try again later.</p>
         :
         Object.keys(changes)
           .sort((a, b) => b.split('.').join('') - a.split('.').join(''))
           .map(log => (
-        <MDBView key={log} className="mb-4" hover>
+        <div className="mb-4 hoverer">
           <h4>{log}:</h4>
             <ul>
             { changes[log].split(';').map(change => (
               <li key={change}>{change}</li>
             )) }
             </ul>
-          <MDBMask overlay="orange-slight" />
-        </MDBView>
-      ))}
 
-        {/* <img height="300" src={Images.icon} /> */}
+        </div>
+      ))}
       </MDBContainer> 
     )
   }
