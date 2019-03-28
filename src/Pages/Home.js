@@ -74,7 +74,7 @@ export default class Home extends React.Component{
           </Row>
 
 
-          <Donate />
+          {/* <Donate /> */}
 
         </Container>
       </div>
