@@ -1,35 +1,52 @@
 import React from 'react';
-import { MDBContainer, MDBRow, } from "mdbreact";
+import { MDBContainer, MDBRow, MDBMask, MDBView } from "mdbreact";
 import { AppName } from '../Utils/Assets';
 
-const changelogs = {
-  "1.1.0": "Hero talent tree; Scrollable Homescreen with new items (Tip, Patch Notes, Settings); Dota 2 game tips; Patch notes; No images recache at wiki update",
-  "1.2.2": "Hero roles; Hero complexity; Hero advanced attributes; Hero changelog (from Patch notes); Item changelog (from Patch notes); Recalculated attribute bonuses; Added default wiki data; No longer have to download additional data on first run; User consent for pre-caching images; UI tweaks (eg: disable menu bounce on IOS); Expo SDK upgrade; Various performance enhancements;",
-  "1.3.0": "Added translations engine; Available additional languages: French, Romanian;",
-  "2.0.0": "Rebranded to Pocket Info for Dota2; Minor layout adjustments;",
-  "2.0.1": "Bugfix: Desired language is now loaded by default; Various small fixes;",
-  "2.0.2": "Icon change (enlarged background); Optimized all images (reduced app size by 1MB); Added About button on Home screen;",
-}
 export default class Changelog extends React.PureComponent {
-  componentDidMount() {
+  state = {
+    changes: null,
+  }
+  async componentDidMount() {
     this.props.headerBackground(true);
+
+    try {
+      this.setState({ changes: await (await fetch('./changelog.json')).json() })
+    } catch (e) {
+      this.setState({ changes: {} })
+      alert(`Could not load changelog. \r\n\r\n ${e}`);
+    }
   }
   render() {
+    const { changes } = this.state;
+
     return (
       <MDBContainer className="padtop">
-      <p>
-        <h2>Changelog</h2>
-      <AppName /> version history
-      </p>
-      {Object.keys(changelogs).sort((a, b) => b.split('.').join('') - a.split('.').join('')).map(log => (
         <MDBRow>
-          <p>
-            <h4>{log}:</h4>
-            { changelogs[log].split(';').map(change => (
-              <div>{change}</div>
-            )) }
-          </p>
+          <div>
+            <h2>Changelog</h2>
+            <p>
+              <AppName /> version history
+            </p>
+          </div>
         </MDBRow>
+        <br/>
+      { !changes ? <p>Loading...</p>
+        :
+        Object.keys(changes).length == 0 
+        ? <p>Could not load changelog at this time. Please try again later.</p>
+        :
+        Object.keys(changes)
+          .sort((a, b) => b.split('.').join('') - a.split('.').join(''))
+          .map(log => (
+        <MDBView key={log} className="mb-4" hover>
+          <h4>{log}:</h4>
+            <ul>
+            { changes[log].split(';').map(change => (
+              <li key={change}>{change}</li>
+            )) }
+            </ul>
+          <MDBMask overlay="orange-slight" />
+        </MDBView>
       ))}
 
         {/* <img height="300" src={Images.icon} /> */}

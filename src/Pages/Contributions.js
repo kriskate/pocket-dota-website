@@ -24,11 +24,15 @@ export default class Contributions extends React.PureComponent {
         <p>
           <h2>Contributing</h2>
             <p>The app's codebase is available on <a href={urls.gh}>github.</a></p>
+            <br/>
+
             <p>
               <h4>Code</h4>
               <AppName /> is written in React Native (via Expo), so if you're a JavaScript developer, you can easily understand the app's code.<br/>
               For more information regarding a possible contribution the the app's codebase, <a href={urls.ghApp}>go here</a>.
             </p>
+            <br/>
+
             <p>
               <h4>Translations</h4>
               <p>
@@ -43,6 +47,8 @@ export default class Contributions extends React.PureComponent {
                 <b>The stats section</b> - comes from <a href={URLS["Open Dota"]}>OpenDota</a>. If you encounter any translation problems with this section, you can help out <a href={urls.crowdinODOTA}>here</a>.<br/>
               </p>            
             </p>
+            <br/>
+
             <p>
               <h4>Donations</h4>
               <p>
